@@ -1,0 +1,113 @@
+.primary {
+  background: url('/images/static/bg-primary-granit.png') no-repeat top left;
+  width: 100%;
+  height: auto;
+  padding: 124px 0 100px; 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(39, 39, 39, 0.1), rgba(217, 217, 217, 0.5));
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.primary {
+  & .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.primary__title {
+  font-size: calc(36px + 36 * ((100vw - 375px) / (1920 - 375)));
+  position: relative;
+  z-index: 4;
+}
+
+.primary__block-form {
+  display: none;
+}
+
+.form__primary {
+  max-width: 520px;
+  width: 100%;
+  height: 320px;
+  background-color: $bg-form;
+  justify-self: flex-end;
+}
+
+.btn-submit {
+  background: $btn-gradient;
+  max-width: 290px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.form-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__primary::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../images/static/form-bg.png') no-repeat top right;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+}
+
+
+.primary-granite-bg {
+  position: absolute;
+  left: -10px;
+  bottom: -45px;
+  z-index: 1;
+  width: 48%;
+  display: none;
+
+}
+
+
+@media (min-width: 768px) {
+  .primary {
+    background: url('./../images/static/bg-header.jpg') no-repeat center center;
+    width: 100%;
+    height: auto;
+    padding: 240px 0 200px; 
+    object-fit: cover;
+  }
+
+  .primary__block-form {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .primary-granite-bg {
+    display: block;
+  }
+}
+
+
+@media (min-width: 1920px) {
+  .primary__title {
+    font-size: 72px;
+  }
+}

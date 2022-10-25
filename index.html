@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Иранский и Корельский Граниты</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__left">
+            <a href="/">
+              <img class="logo" src="./images/icons/logo.svg" alt="logo">
+            </a>
+          </div>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="header__nav-item"><a href="#stocks" class="nav__link">Акции</a></li>
+              <li class="header__nav-item"><a href="#product" class="nav__link">Продукция</a></li>
+              <li class="header__nav-item"><a href="#details" class="nav__link">Галерея</a></li>
+              <li class="header__nav-item"><a href="#about" class="nav__link">О нас</a></li>
+              <li class="header__nav-item"><a href="#sertificates" class="nav__link">Сертификаты</a></li>
+            </ul>
+
+            <div class="nav__contacts">
+              <ul class="nav__contacts-list">
+                <li class="nav__contacts-list__item">Контакты</li>
+                <li class="nav__contacts-list__item">Телефон:</li>
+                <li class="nav__contacts-list__item"><a href="tel:">+7 (812) 433-12-15</a></li>
+                <li class="nav__contacts-list__item">Электронная почта:</li>
+                <li class="nav__contacts-list__item"><a href="mailto:">temp@mail.ru</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="header__right">
+            <div class="header__tel">
+              <a class="header__tel-link" href="tel:+7 (812) 433-12-15">+7 (812) 433-12-15</a>
+            </div>
+            <div class="header__burger">
+              <span></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="primary" id="primary">
+        <div class="container">
+          <div class="primary__wrapper">
+            <h1 class="primary__title">
+              Иранский и Карельский граниты <br>
+              для ритуальных услуг <br>
+              и строительства
+            </h1>
+  
+            <div class="primary__block-form">
+              <form method="post" action="#" autocomplete="off" class="form form__primary">
+                <div class="form-body">
+                  <label for="">
+                    <span>Оставьте заявку <br> и мы вам перезвоним</span>
+                    <input type="text" placeholder="Имя" name="name">
+                  </label>
+                  <label for="">
+                    <input class="telefone-field" type="tel" placeholder="Ваш телефон" name="telephone">
+                  </label>
+                  <input type="submit" value="Отправить" class="btn-submit">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <img  class="primary-granite-bg" src="./images/static/bg-primary-granit.png" alt="granit">
+      </section>
+     <section class="section slider" id="stocks">
+      
+      <!-- Карточка предложения -->
+      <dialog id="popup">
+        <article class="popup">
+          <div class="popup__content">
+            <h3 class="popup__title card__title" data-attr="title">TUSERKAN</h3>
+            <p class="popup__subtitle card__subtitle">Polished</p>
+            <p class="popup__text popup__text--size card__offer-sizes" data-attr="size">300*600*30</p>
+
+            <img src="./images/static/slider/787_original-2.png" 
+             data-attr="previewImage" 
+             class="popup__card--image card__image"
+              width="308" 
+              height="154" 
+              alt="Изображение товара">
+  
+              <div class="price__block">
+                <p class="popup__text popup__text--price price"  data-attr="price">380,88$</p>
+                <p class="popup__text--old-price old-price"  data-attr="oldPrice">380,88$</p>
+              </div>
+            <p class="popup__text popup__text--amount amount"  data-attr="amount">1м/п</p>
+          </div>
+          <div class="popup__description">
+            <h4 class="popup__text popup__text--stock" data-attr="stock">На этот товар действует Акция, <br> подробности можно узнать <br> у менеджера.</h4>
+            <ul class="popup__features" data-attr="features">
+              <li class="popup__feature popup__feature--header">Материал</li>
+              <li class="popup__feature popup__feature--material">Гранит</li>
+              <li class="popup__feature popup__feature--header">Доступные формы</li>
+              <li class="popup__feature popup__feature--shapes">Плитка</li>
+              <li class="popup__feature popup__feature--header">Доступная толщина</li>
+              <li class="popup__feature popup__feature--thickness">20мм</li>
+              <li class="popup__feature popup__feature--header">Поверхность</li>
+              <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
+              <li class="popup__feature popup__feature--header">Страна</li>
+              <li class="popup__feature popup__feature--country">Иран</li>
+              <li class="popup__feature popup__feature--header">Цвет</li>
+              <li class="popup__feature popup__feature--color">Коричневый</li>
+            </ul>
+            <div class="popup__button">
+              <a href="/"> Заказать</a>
+            </div>
+          </div>
+        </article>
+
+        <form class="form form__primary form__popup" method="post" autocomplete="off">
+          <div class="form-body">
+            <label for="">
+              <span>Оставьте заявку <br> и мы вам перезвоним</span>
+              <input type="text" placeholder="Имя" name="name">
+            </label>
+            <label for="">
+              <input class="telefone-field" type="tel" placeholder="Ваш номер" name="telephone">
+            </label>
+            <input type="submit" value="Отправить" class="btn-submit">
+          </div>
+        </form> 
+      </dialog>
+        <div class="swiper mySwiper offers">
+          <div class="swiper-wrapper offers__wrapper">
+            <div class="swiper-slide">
+              <div class="offers__card card">
+                <img class="card__stock active" src="./images/icons/fontisto_shopping-sale.svg" alt="акция">
+                <div class="card__top">
+                  <p class="card__title">NATANZ</p>
+                  <p class="card__subtitle"></p>
+                  <p class="card__offer-sizes">300*300*50</p>
+                </div>
+                <figure>
+                  <img class="card__image" src="./images/static/slider/787_original-1.png" alt="offer">
+                  <figcaption>
+                    <div class="card__price-block">
+                      <p class="price">350,88$</p>
+                      <p class="old-price active">380,88$</p>
+                    </div>
+                    <p class="amount">1м/п</p>
+                  </figcaption>
+                </figure>
+                <a href="/" class="btn-detail">Подробнее</a>
+                <ul class="card__features hidden">
+                  <li class="popup__feature popup__feature--material">Гранит</li>
+                  <li class="popup__feature popup__feature--shapes">Плитка</li>
+                  <li class="popup__feature popup__feature--thickness">20 мм</li>
+                  <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
+                  <li class="popup__feature popup__feature--country">Иран</li>
+                  <li class="popup__feature popup__feature--color">черный</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers__card card">
+                <img class="card__stock" src="./images/icons/fontisto_shopping-sale.svg" alt="акция">
+                <div class="card__top">
+                  <p class="card__title">NATANZ</p>
+                  <p class="card__subtitle">Poliched</p>
+                  <p class="card__offer-sizes">300*300*50</p>
+                </div>
+                <figure>
+                  <img class="card__image" src="./images/static/slider/787_original-2.png" alt="offer">
+                  <figcaption>
+                    <div class="card__price-block">
+                      <p class="price">310,88$</p>
+                      <p class="old-price active">370,88$</p>
+                    </div>
+                    <p class="amount">1м/п</p>
+                  </figcaption>
+                </figure>
+                <a href="/" class="btn-detail">Подробнее</a>
+                <ul class="card__features hidden">
+                  <li class="popup__feature popup__feature--material">Камень</li>
+                  <li class="popup__feature popup__feature--shapes">Плитка</li>
+                  <li class="popup__feature popup__feature--thickness">20 мм</li>
+                  <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
+                  <li class="popup__feature popup__feature--country">Иран</li>
+                  <li class="popup__feature popup__feature--color">черный</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers__card card">
+                <img class="card__stock" src="./images/icons/fontisto_shopping-sale.svg" alt="акция">
+                <div class="card__top">
+                  <p class="card__title">NATANZ</p>
+                  <p class="card__subtitle">Poliched</p>
+                  <p class="card__offer-sizes">300*300*50</p>
+                </div>
+                <figure>
+                  <img class="card__image" src="./images/static/slider/787_original-3.png" alt="offer">
+                  <figcaption>
+                    <div class="card__price-block">
+                      <p class="price">310,88$</p><p class="old-price active">380,88$</p>
+                    </div>
+                    <p class="amount">12м/п</p>
+                  </figcaption>
+                </figure>
+                <a href="/" class="btn-detail">Подробнее</a>
+                <ul class="card__features hidden">
+                  <li class="popup__feature popup__feature--material">Мрамор</li>
+                  <li class="popup__feature popup__feature--shapes">Плитка</li>
+                  <li class="popup__feature popup__feature--thickness">20 мм</li>
+                  <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
+                  <li class="popup__feature popup__feature--country">Иран</li>
+                  <li class="popup__feature popup__feature--color">черный</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers__card card">
+                <img class="card__stock" src="./images/icons/fontisto_shopping-sale.svg" alt="акция">
+                <div class="card__top">
+                  <p class="card__title">NATANZ</p>
+                  <p class="card__subtitle">Poliched</p>
+                  <p class="card__offer-sizes">300*300*50</p>
+                </div>
+                <figure>
+                  <img class="card__image" src="./images/static/slider/787_original-4.png" alt="offer">
+                  <figcaption>
+                    <div class="card__price-block">
+                      <p class="price">310,88$</p><p class="old-price"></p>
+                    </div>
+                    <p class="amount">1м/п</p>
+                  </figcaption>
+                </figure>
+                <a href="/" class="btn-detail">Подробнее</a>
+                <ul class="card__features hidden">
+                  <li class="popup__feature popup__feature--material">Гранит</li>
+                  <li class="popup__feature popup__feature--shapes">Плитка</li>
+                  <li class="popup__feature popup__feature--thickness">20 мм</li>
+                  <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
+                  <li class="popup__feature popup__feature--country">Иран</li>
+                  <li class="popup__feature popup__feature--color">черный</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers__card card">
+                <img class="card__stock" src="./images/icons/fontisto_shopping-sale.svg" alt="акция">
+                <div class="card__top">
+                  <p class="card__title">NATANZ</p>
+                  <p class="card__subtitle">Poliched</p>
+                  <p class="card__offer-sizes">300*300*50</p>
+                </div>
+                <figure>
+                  <img class="card__image" src="./images/static/slider/787_original-1.png" alt="offer">
+                  <figcaption>
+                    <div class="card__price-block">
+                      <p class="price">310,88$</p>
+                      <p class="old-price active">380,88$</p>
+                    </div>
+                    <p class="amount">1м/п</p>
+                  </figcaption>
+                </figure>
+                <a href="/" class="btn-detail">Подробнее</a>
+                <ul class="card__features hidden">
+                  <li class="popup__feature popup__feature--material">Гранит</li>
+                  <li class="popup__feature popup__feature--shapes">Плитка</li>
+                  <li class="popup__feature popup__feature--thickness">20 мм</li>
+                  <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
+                  <li class="popup__feature popup__feature--country">Иран</li>
+                  <li class="popup__feature popup__feature--color">черный</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers__card card">
+                <img class="card__stock active" src="./images/icons/fontisto_shopping-sale.svg" alt="акция">
+                <div class="card__top">
+                  <p class="card__title">NATANZ</p>
+                  <p class="card__subtitle">Poliched</p>
+                  <p class="card__offer-sizes">300*300*50</p>
+                </div>
+                <figure>
+                  <img class="card__image" src="./images/static/slider/787_original-1.png" alt="offer">
+                  <figcaption>
+                    <div class="card__price-block">
+                      <p class="price">310,88$</p><p class="old-price active">380,88$</p>
+                    </div>
+                    <p class="amount">1м/п</p>
+                  </figcaption>
+                </figure>
+                <a href="/" class="btn-detail">Подробнее</a>
+                <ul class="card__features hidden">
+                  <li class="popup__feature popup__feature--material">Гранит</li>
+                  <li class="popup__feature popup__feature--shapes">Плитка</li>
+                  <li class="popup__feature popup__feature--thickness">20 мм</li>
+                  <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
+                  <li class="popup__feature popup__feature--country">Иран</li>
+                  <li class="popup__feature popup__feature--color">черный</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__navigation">
+            <a href="/" class="button-prev offer-prev"><img src="./images/icons/Left.svg" alt="left"></a>
+            <div class="swiper-pagination"></div>
+            <a href="/" class="button-next offer-next"><img src="./images/icons/Right.svg" alt="right"></a>
+          </div>
+        </div>
+      </section>
+
+     <div class="advantage-product">
+      <section class="advantage">
+        <div class="container">
+          <h2 class="advantage__title">В чем наши преимущества</h2>
+          <div class="advantage__wrapper">
+              <div class="advantage__row">
+                <div class="advantage__col">
+                  <p class="advantage-header">2000 кв/м</p>
+                  <p>Площадь производства.
+                    Завод оснащен современным оборудованием с годовой проектной мощностью свыше пяти тысяч тонн.</p>
+                </div>
+                <div class="advantage__col">
+                  <p class="advantage-header">> 100 станков</p>
+                  <p>Технические возможности и квалификация персонала завода  позволяют осуществлять заказы в сжатые сроки.</p>
+                </div>
+                <div class="advantage__col">
+                  <p class="advantage-header">> 10 000 кб/м</p>
+                  <p>Это минимальный объем
+                    изгатавливаемый нами за месяц</p>
+                </div>
+              </div>
+              <div class="advantage__row">
+                <div class="advantage__col">
+                  <p class="advantage-header">Пожизненная гарантия</p>
+                  <p>На Карельский габбро-диабаз.
+                    Мы предлагаем уникальную продукцию из карельского гранита, которая не имеет аналогов на российском рынке.</p>
+                </div>
+                <div class="advantage__col">
+                  <p class="advantage-header">Блоки и Слэбы</p>
+                  <p>Мы поставляем блоки и слэбы.
+                    Поможем Вам организовать доставку в любой регион с помощью и по ценам услуг транспортных компаний.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section product" id="product">
+        <div class="container">
+          <h2 class="product__title">Продукция</h2>
+
+          <div class="product__wrapper">
+            <div class="product__accordeon">
+
+              <div id="accordion">
+                <h3 class="accordion__top" data-value="monuments">Надгробные плиты <span>&#8250;</span></h3>
+                <div class="tabs__text" id="tabs-1">
+                  <p>
+                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
+                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
+                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
+                  Избранный природный рисунок на плите получается ярким и четким.
+                  </p>
+                </div>
+                <h3 class="accordion__top" data-value="stands">Подставки <span>&#8250;</span></h3>
+                <div class="tabs__text" id="tabs-2">
+                  <p>
+                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
+                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
+                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
+                  Избранный природный рисунок на плите получается ярким и четким.
+                  </p>
+                </div>
+                <h3 class="accordion__top" data-value="stella">Стелы <span>&#8250;</span></h3>
+                <div class="tabs__text" id="tabs-3">
+                  <p>
+                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
+                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
+                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
+                  Избранный природный рисунок на плите получается ярким и четким.
+                  </p>
+                </div>
+                <h3 class="accordion__top" data-value="paving">Брусчатка <span>&#8250;</span></h3>
+                <div class="tabs__text" id="tabs-4">
+                  <p>
+                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
+                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
+                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
+                  Избранный природный рисунок на плите получается ярким и четким.
+                  </p>
+                </div>
+                <h3 class="accordion__top" data-value="flower">Цветник <span>&#8250;</span></h3>
+                <div class="tabs__text" id="tabs-5">
+                  <p>
+                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
+                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
+                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
+                  Избранный природный рисунок на плите получается ярким и четким.
+                  </p>
+                </div>
+                <h3 class="accordion__top" data-value="balls">Шары на ножке <span>&#8250;</span></h3>
+                <div class="tabs__text" id="tabs-6">
+                  <p>
+                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
+                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
+                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
+                  Избранный природный рисунок на плите получается ярким и четким.
+                  </p>
+                </div>
+                <h3 class="accordion__top" data-value="vases">Вазы <span>&#8250;</span></h3>
+                <div class="tabs__text" id="tabs-7">
+                  <p>
+                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
+                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
+                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
+                  Избранный природный рисунок на плите получается ярким и четким.
+                  </p>
+                </div>
+                <h3 class="accordion__top" data-value="slab">Слэбы <span>&#8250;</span></h3>
+                <div class="tabs__text" id="tabs-8">
+                  <p>
+                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
+                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
+                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
+                  Избранный природный рисунок на плите получается ярким и четким.
+                  </p>
+                </div>
+                <h3 class="accordion__top" data-value="blocks">Блоки <span>&#8250;</span></h3>
+                <div class="tabs__text" id="tabs-9">
+                  <p>
+                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
+                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
+                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
+                  Избранный природный рисунок на плите получается ярким и четким.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__images">
+              <img class="accordion-image" data-value="monuments" src="./images/static/monument.png" alt="monument">
+              <img class="accordion-image" data-value="stands" src="./images/static/blocks.png" alt="blocks">
+              <img class="accordion-image" data-value="stella" src="./images/static/stella.png" alt="blocks">
+              <img class="accordion-image" data-value="paving" src="./images/static/blocks.png" alt="blocks">
+              <img class="accordion-image" data-value="flower" src="./images/static/monument.png" alt="blocks">
+              <img class="accordion-image" data-value="balls" src="./images/static/blocks.png" alt="blocks">
+              <img class="accordion-image" data-value="vases" src="./images/static/monument.png" alt="blocks">
+              <img class="accordion-image" data-value="slab" src="./images/static/blocks.png" alt="blocks">
+              <img class="accordion-image" data-value="blocks" src="./images/static/monument.png" alt="blocks">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div> 
+
+      <section class="section details" id="details">
+        <div class="container">
+          <h2 class="details__title">В деталях</h2>
+
+          <div class="details__wrapper">
+            <div class="details__card">
+              <img src="../images/static/details/image-1.jpg" alt="details_1">    
+            </div>
+            <div class="details__card">
+              <img src="./images/static/details/image-2.jpg" alt="details_2">  
+            </div>
+            <div class="details__card">
+              <img src="./images/static/details/image-3.jpg" alt="details_3">  
+            </div>
+            <div class="details__card">
+              <img src="./images/static/details/image-4.jpg" alt="details_4"> 
+            </div>
+            <div class="details__card">
+              <img src="./images/static/details/image-5.jpg" alt="details_5"> 
+            </div>
+            <div class="details__card">
+              <img src="./images/static/details/image-1.jpg" alt="details_6"> 
+            </div>
+          </div>
+          <div class="details-btn">
+            <a href="" class="load-more">Загрузить еще</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="about__wrapper">
+            <h2 class="about__title">О нас</h2>
+
+            <div class="about__description">
+              <p>Компания Петра Альянс представляет огромный ассортимент изделий из гранита для осуществления работ и благоустройства дорожного, декоративного и архитектурно-строительного назначения.</p>
+              <p>Все представленные виды продукции отличаются высоким уровнем износостойкости, безупречным качеством, идеальной фактурой и цветом.</p>
+              <p>Объемы нашего производства в течение всего года гарантируют доступность всей продукции.</p>
+              <p>Постоянный и жесткий контроль качества полностью исключает производство элементов низкого качества. Вся представленная продукция доступна в приемлемом ценовом диапазоне, также мы предлагаем нашим клиентам постоянные скидки.</p>
+              <p>Наши высококвалифицированные сотрудники всегда готовы провести грамотную консультацию и помочь осуществить безошибочный выбор требуемого вам продукта. К каждому клиенту мы проявляем индивидуальный подход.</p>
+              <p> Этот подход позволяет гарантировать лучшее качество выполняемой работы.</p>
+            </div>
+
+            <div class="section about__slider setificates" id="sertificates">
+              <div class="swiper sertificates-swiper">
+                <div class="swiper-wrapper setificates__wrapper">
+                  <div class="swiper-slide">
+                    <div class="sertificates__item">
+                      <img src="./images/static/sertificates/sert-gabbro-blocks 1-1.jpg" alt="sertificates-1">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sertificates__item">
+                      <img src="./images/static/sertificates/sert-gabbro-blocks 1.jpg" alt="sertificates-2">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sertificates__item">
+                      <img src="./images/static/sertificates/sert-gabbro-blocks 2.jpg" alt="sertificates-3">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sertificates__item">
+                      <img src="./images/static/sertificates/sert-gabbro-blocks 2.jpg" alt="sertificates-3">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sertificates__item">
+                      <img src="./images/static/sertificates/sert-gabbro-blocks 2.jpg" alt="sertificates-3">
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__navigation">
+                  <a href="/" class="button-prev sertificates-prev"><img src="./images/icons/Left.svg" alt="left"></a>
+                  <div class="swiper-pagination"></div>
+                  <a href="/" class="button-next sertificates-next"><img src="./images/icons/Right.svg" alt="right"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <form method="post" autocomplete="off" class="form form__footer">
+          <div class="form-body">
+            <label for="">
+              <span>Оставьте заявку <br> и мы вам перезвоним</span>
+              <input type="text" placeholder="Имя" name="name">
+            </label>
+            <label for="">
+              <input class="telefone-field" type="tel" placeholder="Ваш номер" name="telephone">
+            </label>
+            <input type="submit" value="Отправить" class="btn-submit">
+          </div>
+        </form>
+
+        <div class="footer__contacts">
+          <ul class="footer__contacts-list">
+            <li>Контакты</li>
+            <li>Телефон:</li>
+            <li><a href="tel:+7 (812) 433-12-15">+7 (812) 433-12-15</a></li>
+            <li>Электронная почта:</li>
+            <li><a href="mailto:temp@mail.ru">temp@mail.ru</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

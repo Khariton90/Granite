@@ -1,0 +1,50 @@
+.page-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  font-weight: 700;
+  padding: 20px 15px;
+
+  background-color: $color-white;
+  background: url('./../images/static/primary-granit.png') no-repeat left bottom;
+  background-size: 100% 50%;
+
+  & img {
+    margin-bottom: 5rem;
+  }
+
+  & h1 {
+    font-size: 96px;
+  }
+
+  & h2 {
+    font-size: calc(18px + 14 * (100vw - 375px) / 1620);
+  }
+
+  & a {
+    color: $color-green;
+    font-size: calc(16px + 6 * (100vw - 375px) / 1620);
+  }
+}
+
+@media (min-width: 450px) {
+  .page-not-found {
+    background-size: 70% 60%;
+  }
+}
+
+@media (min-width: 750px) {
+  .page-not-found {
+    background-size: 50% 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-not-found {
+    background-size: 50% 100%;
+  }
+}
