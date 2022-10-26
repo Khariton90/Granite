@@ -66,10 +66,10 @@
                 <div class="form-body">
                   <label for="">
                     <span>Оставьте заявку <br> и мы вам перезвоним</span>
-                    <input type="text" placeholder="Имя" name="name">
+                    <input type="text" placeholder="Имя" name="name" required>
                   </label>
                   <label for="">
-                    <input class="telefone-field" type="tel" placeholder="Ваш телефон" name="telephone">
+                    <input class="telefone-field" type="tel" placeholder="Ваш телефон" name="telephone" required minlength="18">
                   </label>
                   <input type="submit" value="Отправить" class="btn-submit">
                 </div>
@@ -128,10 +128,14 @@
           <div class="form-body">
             <label for="">
               <span>Оставьте заявку <br> и мы вам перезвоним</span>
-              <input type="text" placeholder="Имя" name="name">
+              <input type="text" placeholder="Имя" name="name" required>
             </label>
             <label for="">
-              <input class="telefone-field" type="tel" placeholder="Ваш номер" name="telephone">
+              <input class="telefone-field" 
+              type="tel" 
+              placeholder="Ваш номер" 
+              name="telephone" 
+              minlength="18">
             </label>
             <input type="submit" value="Отправить" class="btn-submit">
           </div>
@@ -143,7 +147,7 @@
               <div class="offers__card card">
                 <img class="card__stock active" src="./images/icons/fontisto_shopping-sale.svg" alt="акция">
                 <div class="card__top">
-                  <p class="card__title">NATANZ</p>
+                  <p class="card__title">TUSERKAN</p>
                   <p class="card__subtitle"></p>
                   <p class="card__offer-sizes">300*300*50</p>
                 </div>
@@ -172,7 +176,35 @@
               <div class="offers__card card">
                 <img class="card__stock" src="./images/icons/fontisto_shopping-sale.svg" alt="акция">
                 <div class="card__top">
-                  <p class="card__title">NATANZ</p>
+                  <p class="card__title">FLAMED</p>
+                  <p class="card__subtitle">Poliched</p>
+                  <p class="card__offer-sizes">300*300*50</p>
+                </div>
+                <figure>
+                  <img class="card__image" src="./images/static/slider/787_original.png" alt="offer">
+                  <figcaption>
+                    <div class="card__price-block">
+                      <p class="price">310,88$</p><p class="old-price active">380,88$</p>
+                    </div>
+                    <p class="amount">1м/п</p>
+                  </figcaption>
+                </figure>
+                <a href="/" class="btn-detail">Подробнее</a>
+                <ul class="card__features hidden">
+                  <li class="popup__feature popup__feature--material">Мрамор</li>
+                  <li class="popup__feature popup__feature--shapes">Плитка</li>
+                  <li class="popup__feature popup__feature--thickness">20 мм</li>
+                  <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
+                  <li class="popup__feature popup__feature--country">Иран</li>
+                  <li class="popup__feature popup__feature--color">черный</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="offers__card card">
+                <img class="card__stock" src="./images/icons/fontisto_shopping-sale.svg" alt="акция">
+                <div class="card__top">
+                  <p class="card__title">CHAYAN</p>
                   <p class="card__subtitle">Poliched</p>
                   <p class="card__offer-sizes">300*300*50</p>
                 </div>
@@ -211,7 +243,7 @@
                     <div class="card__price-block">
                       <p class="price">310,88$</p><p class="old-price active">380,88$</p>
                     </div>
-                    <p class="amount">12м/п</p>
+                    <p class="amount">1м/п</p>
                   </figcaption>
                 </figure>
                 <a href="/" class="btn-detail">Подробнее</a>
@@ -237,7 +269,7 @@
                   <img class="card__image" src="./images/static/slider/787_original-4.png" alt="offer">
                   <figcaption>
                     <div class="card__price-block">
-                      <p class="price">310,88$</p><p class="old-price"></p>
+                      <p class="price">310,88$</p><p class="old-price active"></p>
                     </div>
                     <p class="amount">1м/п</p>
                   </figcaption>
@@ -365,9 +397,9 @@
             <div class="product__accordeon">
 
               <div id="accordion">
-                <h3 class="accordion__top" data-value="monuments">Надгробные плиты <span>&#8250;</span></h3>
+                <h3 class="accordion__top select" data-value="monuments">Надгробные плиты <span>&#8250;</span></h3>
                 <div class="tabs__text" id="tabs-1">
-                  <p>
+                  <p >
                     Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
 
                   Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
@@ -468,7 +500,7 @@
             </div>
 
             <div class="product__images">
-              <img class="accordion-image" data-value="monuments" src="./images/static/monument.png" alt="monument">
+              <img class="accordion-image active" data-value="monuments" src="./images/static/monument.png" alt="monument">
               <img class="accordion-image" data-value="stands" src="./images/static/blocks.png" alt="blocks">
               <img class="accordion-image" data-value="stella" src="./images/static/stella.png" alt="blocks">
               <img class="accordion-image" data-value="paving" src="./images/static/blocks.png" alt="blocks">
@@ -481,6 +513,18 @@
           </div>
         </div>
       </section>
+      <form method="post" autocomplete="off" class="form form__footer form__product">
+        <div class="form-body">
+          <label for="">
+            <span>Оставьте заявку <br> и мы вам перезвоним</span>
+            <input type="text" placeholder="Имя" name="name" required>
+          </label>
+          <label for="">
+            <input class="telefone-field" type="tel" placeholder="Ваш номер" name="telephone" minlength="18">
+          </label>
+          <input type="submit" value="Отправить" class="btn-submit">
+        </div>
+      </form>
     </div> 
 
       <section class="section details" id="details">
@@ -488,27 +532,45 @@
           <h2 class="details__title">В деталях</h2>
 
           <div class="details__wrapper">
-            <div class="details__card">
-              <img src="./images/static/details/image-1.jpg" alt="details_1">    
+            <div class="details__card" data-src="./images/static/details/image-1.jpg">
+              <img src="./images/static/details/image-1.jpg"  class="" alt="details_1">
             </div>
-            <div class="details__card">
-              <img src="./images/static/details/image-2.jpg" alt="details_2">  
+            <div class="details__card" data-src="./images/static/details/image-2.jpg">
+              <img src="./images/static/details/image-2.jpg"  alt="details_2">  
             </div>
-            <div class="details__card">
-              <img src="./images/static/details/image-3.jpg" alt="details_3">  
+            <div class="details__card" data-src="./images/static/details/image-3.jpg">
+              <img src="./images/static/details/image-3.jpg"  alt="details_3">  
             </div>
-            <div class="details__card">
-              <img src="./images/static/details/image-4.jpg" alt="details_4"> 
+            <div class="details__card"data-src="./images/static/details/image-4.jpg">
+              <img src="./images/static/details/image-4.jpg"  alt="details_4"> 
             </div>
-            <div class="details__card">
-              <img src="./images/static/details/image-5.jpg" alt="details_5"> 
+            <div class="details__card" data-src="./images/static/details/image-5.jpg">
+              <img src="./images/static/details/image-5.jpg"  alt="details_5"> 
             </div>
-            <div class="details__card">
-              <img src="./images/static/details/image-1.jpg" alt="details_6"> 
+            <div class="details__card" data-src="./images/static/details/image-1.jpg">
+              <img src="./images/static/details/image-1.jpg"  alt="details_6"> 
+            </div>
+            <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
+              <img src="./images/static/details/plug.png" alt="details_6"> 
+            </div>
+            <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
+            </div>
+            <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
+            </div>
+            <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
+            </div>
+            <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
+            </div>
+            <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
             </div>
           </div>
           <div class="details-btn">
-            <a href="" class="load-more">Загрузить еще</a>
+            <a href="/" class="load-more">Загрузить еще</a>
           </div>
         </div>
       </section>
@@ -547,7 +609,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="sertificates__item">
-                      <img src="./images/static/sertificates/sert-gabbro-blocks 2.jpg" alt="sertificates-3">
+                      <img src="./images/static/sertificates/sert-gabbro-blocks 2.jpg" alt="sertificates-3" class="zoomple">
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -573,10 +635,10 @@
           <div class="form-body">
             <label for="">
               <span>Оставьте заявку <br> и мы вам перезвоним</span>
-              <input type="text" placeholder="Имя" name="name">
+              <input type="text" placeholder="Имя" name="name" required>
             </label>
             <label for="">
-              <input class="telefone-field" type="tel" placeholder="Ваш номер" name="telephone">
+              <input class="telefone-field" type="tel" placeholder="Ваш номер" name="telephone" minlength="18">
             </label>
             <input type="submit" value="Отправить" class="btn-submit">
           </div>
@@ -593,7 +655,13 @@
         </div>
       </div>
     </footer>
-  </div>
+
+    <template id="modal-success">
+      <div class="modal-success">
+        <p>Благодарим за выбор нашей компании,<br> в ближайшее время вам перезвонит <br> наш менеджер.</p>
+      </div>
+    </div>
+    </template>  
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>

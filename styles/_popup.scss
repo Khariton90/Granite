@@ -23,7 +23,7 @@ dialog {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: #F9F9F9;
   border-radius: 10px;
-  padding: 38px;
+  padding: 15px 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -45,11 +45,11 @@ dialog {
 
 .popup__content {
   & .card__offer-sizes {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
 
   & .price__block {
-    padding-top: 20px;
+    padding-top: 15px;
   }
 }
 
@@ -87,13 +87,13 @@ dialog {
     color: $color-green;
     font-weight: 500;
     font-size: 14px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
 }
 
 .popup__button {
   float: right;
-  margin-top: 40px;
+  margin-top: 20px 0 10px;
   & a {
     display: block;
     width: 198px;
@@ -138,7 +138,7 @@ dialog {
   height: 0;
   overflow: hidden;
   opacity: 0;
-  margin-top: 30px;
+  margin: 30px auto;
   visibility: hidden;
 }
 
@@ -155,6 +155,7 @@ dialog {
     justify-content: space-between;
     flex-direction: row;
     gap: 60px;
+    padding: 38px;
   }
 
   .popup__description {
@@ -172,11 +173,10 @@ dialog {
   }
 
   .popup__button {
-    position: absolute;
-    right: 38px;
-    bottom: 38px;
     float: none;
-    margin-top: 0;
+    margin: 40px 0 0;
+    display: flex;
+    justify-content: flex-end;
   }
 
 

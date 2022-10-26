@@ -72,6 +72,10 @@
   font-size: 24px;
 }
 
+.amount {
+  font-weight: 700;
+}
+
 .card__offer-sizes {
   font-weight: 400;
 }
@@ -141,5 +145,39 @@
 
   .slider {
     padding: 105px 0 42px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .slider {
+    padding: 54px 0 42px;
+    position: relative;
+  
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 25%;
+      z-index: 2;
+      transition: width 0.6s ease;
+    }
+  
+    &::before {
+      left: 0;
+      background: linear-gradient(90deg, rgba(#EFEFEF, 0.6) 80%, transparent 100%);
+    }
+  
+    &::after {
+      right: 0;
+      background: linear-gradient(90deg,transparent 0%, rgba(#EFEFEF, 0.6) 20%);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      width: 0%;
+      transform: width 6s ease;
+    }
   }
 }

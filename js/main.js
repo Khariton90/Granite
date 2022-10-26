@@ -4,11 +4,24 @@ const header = document.querySelector(".header");
 const accordion = document.getElementById('accordion');
 const imagesList = document.querySelector('.product__images');
 const images = imagesList.querySelectorAll('.accordion-image');
-
 const modal = document.querySelector('dialog');
 const btnOrder = modal.querySelector('.popup__button a');
 const formPopup = modal.querySelector('.form__popup');
 const offerSlider = document.querySelector('.offers');
+const btnLoadMore = document.querySelector('.load-more');
+const detailsCards = document.querySelectorAll('.details__card');
+const offerCards = document.querySelectorAll('.offers__card ');
+
+const templateFragment = document.querySelector('#modal-success').content;
+const template = templateFragment.querySelector('.modal-success');
+
+
+const DEFAULT_VISIBLE_CARDS = 6;
+const COUNT_SHOW_CARDS = 3;
+
+const tab = document.querySelector('#tabs-1');
+const height = tab.scrollHeight;
+tab.style.height = `${height}px`;
 
 function toggleMobileMenu() {
   navMenu.classList.toggle('active');
@@ -99,6 +112,8 @@ const sertificatesSwiper = new Swiper(".sertificates-swiper", {
     prevEl: ".sertificates-prev",
   },
 });
+
+
 
 const swiper = new Swiper(".mySwiper", {
   spaceBetween: 0,
@@ -272,17 +287,35 @@ function showFormModal(evt) {
 btnOrder.addEventListener('click', showFormModal);
 [...document.forms].forEach((form) => form.addEventListener('submit', submitFormHandler)); 
 
-
-//Функция отправки форм
-async function submitFormHandler(evt) {
-  evt.preventDefault();
-
-  const formData =  new FormData(evt.target);
-  const values = Object.fromEntries(formData.entries());
-
-  console.log(values);
-  evt.target.reset();
+function getCountCards(count = 1) {
+  let value = DEFAULT_VISIBLE_CARDS;
+  return function() {
+    value = value + count;
+    return value;
+  }
 }
+
+const counter = getCountCards(COUNT_SHOW_CARDS);
+
+function showCards(cards, counter) {
+  const renderCardsCount = cards.length - counter;
+
+  if (!renderCardsCount) {
+    btnLoadMore.parentNode.remove();
+  }
+
+  if (renderCardsCount >= 0) {
+    [...cards].slice(0, counter).forEach((card) => {
+      card.classList.remove('hide');
+      card.querySelector('img').src = card.dataset.src;
+    });
+  }
+}
+
+btnLoadMore.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  showCards(detailsCards, counter())
+});
 
   // Маска для  телефона!!!!!!!!
   function maskPhone(selector, masked = '+7 (___) ___-__-__') {
@@ -327,104 +360,63 @@ async function submitFormHandler(evt) {
 
   maskPhone('.telefone-field');
 
+[...offerCards].forEach(card => {
+  const stock = card.querySelector('.card__stock');
+  const oldPrice = card.querySelector('.old-price');
+
+  if (oldPrice.textContent !== '') {
+    stock.classList.add('active');
+    return;
+  } 
+
+  oldPrice.classList.remove('active');
+});
+
+function onFail(target) {
+  target.classList.add('invalid');
+  setTimeout(() => {
+    target.classList.remove('disabled');
+    target.classList.remove('invalid');
+;  }, 1000);
+}
+
+function resetForms(nodeEl, target) {
+  target.appendChild(nodeEl);
+
+  setTimeout(() => {
+    if (modal.open) {
+      formPopup.classList.remove('show');
+      btnOrder.textContent = 'Заказать'
+      document.removeEventListener('keydown', keyPressCloseModalHandler);
+      modal.removeEventListener('click', closeModal);
+      modal.close();
+    }
+
+    target.classList.remove('disabled');
+    nodeEl.remove()
+    target.reset();
+
+  }, 2000);
+}
+
+  //Функция отправки форм
+async function submitFormHandler(evt) {
+  evt.preventDefault();
+  const target = evt.target;
+  const formData =  new FormData(target);
+  const body = Object.fromEntries(formData.entries());
 
 
+  const element = template.cloneNode(true);
+  target.classList.add('disabled');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const templateFragment = document.querySelector('#popup').content;
-// const template = templateFragment.querySelector('.popup');
-// const popupPhoto = templateFragment.querySelector('.popup__photo');
-
-
-
-// const createPhotosList = (container, photos) => {
-//   if (photos) {
-//     container.innerHTML = '';
-
-//     photos.forEach((photo) => {
-//       const photosItem = popupPhoto.cloneNode(true);
-//       photosItem.src = photo;
-//       container.append(photosItem);
-//     });
-//   } else {
-//     container.remove();
-//   }
-// };
-
-// const getFeaturesList = (container, features) => {
-//   if (features) {
-//     container.innerHTML = '';
-
-//     features.forEach((feature) => {
-//       const featureListItem = document.createElement('li');
-//       featureListItem.classList.add('popup__feature');
-//       featureListItem.classList.add(`popup__feature--${feature}`);
-//       container.appendChild(featureListItem);
-//     });
-//   } else {
-//     container.remove();
-//   }
-// };
-
-
-    // const createCard = ({ author, offer }) => {
-    //   const element = template.cloneNode(true);
-    //   // const { avatar } = author;
-    //   // const { title, address, price, rooms, guests, type, checkin, checkout, features, description, photos } = offer;
-    //   // const featuresList = element.querySelector('.popup__features');
-    //   // const popupPhotos = element.querySelector('.popup__photos');
-    
-    //   // toggleContent(avatar, element.querySelector('.popup__avatar'), 'src');
-    //   // toggleContent(title, element.querySelector('.popup__title'));
-    //   // toggleContent(address, element.querySelector('.popup__text--address'));
-    //   // toggleContent(getPrice(price), element.querySelector('.popup__text--price'));
-    //   // toggleContent(areaTypes[type], element.querySelector('.popup__type'));
-    //   // toggleContent(getCapacityOffer(rooms, guests), element.querySelector('.popup__text--capacity'));
-    //   // toggleContent(getTimeBooking(checkin, checkout), element.querySelector('.popup__text--time'));
-    //   // toggleContent(description, element.querySelector('.popup__description'));
-    //   // createPhotosList(popupPhotos, photos);
-    //   // getFeaturesList(featuresList, features);
-    
-    //   return console.lod(element);
-    // };
-
-
-
-
-
-
-
-
-
-
-
+  fetch('http://127.0.0.1:5500', { method: 'POST', body })
+  .then((response) => {
+    if (response.ok) {
+      return resetForms(element, target);
+    } else {
+      throw new Error();
+    }
+  }).catch(() => onFail(target));
+}
 

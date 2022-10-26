@@ -12,7 +12,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(rgba(39, 39, 39, 0.1), rgba(217, 217, 217, 0.5));
+    background: linear-gradient(rgba(217, 217, 217, 0.5) 90%, $bg-page 98% 100%);
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -23,13 +23,16 @@
   & .container {
     position: relative;
     z-index: 2;
+    max-width: 1440px;
+    width: 100%;
   }
 }
 
 .primary__title {
-  font-size: calc(36px + 36 * ((100vw - 375px) / (1920 - 375)));
+  font-size: calc(36px + 18 * ((100vw - 375px) / (1920 - 375)));
   position: relative;
   z-index: 4;
+  margin-bottom: 20px;
 }
 
 .primary__block-form {
@@ -68,7 +71,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('./images/static/form-bg.png') no-repeat top right;
+  background: url('/images/static/form-bg.png') no-repeat top right;
   object-fit: cover;
   left: 0;
   top: 0;
@@ -78,11 +81,10 @@
 .primary-granite-bg {
   position: absolute;
   left: -10px;
-  bottom: -45px;
+  bottom: -1.5rem;
   z-index: 1;
-  width: 48%;
+  width: 37%;
   display: none;
-
 }
 
 
@@ -91,8 +93,8 @@
     background: url('./../images/static/bg-header.jpg') no-repeat center center;
     width: 100%;
     height: auto;
-    padding: 240px 0 200px; 
-    object-fit: cover;
+    padding: 10.2rem 0 8.5rem; 
+
   }
 
   .primary__block-form {
@@ -108,6 +110,6 @@
 
 @media (min-width: 1920px) {
   .primary__title {
-    font-size: 72px;
+    font-size: 50px;
   }
 }
