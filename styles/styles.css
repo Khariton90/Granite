@@ -185,7 +185,7 @@
   }
 }
 .primary {
-  background: url("/images/static/bg-primary-granit.png") no-repeat top left;
+  background: url("../images/static/bg-primary-granit.png") no-repeat top left;
   width: 100%;
   height: auto;
   padding: 124px 0 100px;
@@ -254,7 +254,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("/images/static/form-bg.png") no-repeat top right;
+  background: url("../images/static/form-bg.png") no-repeat top right;
   -o-object-fit: cover;
      object-fit: cover;
   left: 0;
@@ -669,7 +669,7 @@
   }
 }
 .about {
-  padding: 60px 0 46px;
+  padding: 60px 0 5px;
   position: relative;
 }
 .about::before, .about::after {
@@ -738,6 +738,12 @@
   }
   .about::after {
     display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .about {
+    padding: 60px 0 46px;
+    position: relative;
   }
 }
 .footer {

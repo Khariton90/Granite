@@ -1,5 +1,5 @@
 .about {
-  padding: 60px 0 46px;
+  padding: 60px 0 5px;
   position: relative;
 
   &::before,
@@ -80,4 +80,11 @@
     }
   
   } 
+}
+
+@media (min-width: 1024px) {
+  .about {
+    padding: 60px 0 46px;
+    position: relative;
+  }
 }
