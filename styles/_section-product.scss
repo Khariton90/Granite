@@ -49,7 +49,7 @@
 .tabs__text {
   & p {
     padding: 10px 34px 89px 34px;
-    letter-spacing: 0.12em;
+    font-size: 18px;
   }
 }
 
@@ -90,6 +90,14 @@
   .form__product {
     display: none;
   }
+
+  .tabs__text {
+    & p {
+      letter-spacing: 0.12em;
+      font-size: 20px;
+    }
+  }
+  
 }
 
 @media (min-width: 1024px) {
