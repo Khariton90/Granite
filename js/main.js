@@ -1,11 +1,12 @@
 const burger = document.querySelector('.header__burger');
 const navMenu = document.querySelector('.nav');
 const header = document.querySelector(".header");
-const accordion = document.getElementById('accordion');
-const imagesList = document.querySelector('.product__images');
-const images = imagesList.querySelectorAll('.accordion-image');
+// const accordion = document.getElementById('accordion');
+// const imagesList = document.querySelector('.product__images');
+// const images = imagesList.querySelectorAll('.accordion-image');
 const modal = document.querySelector('dialog');
 const btnOrder = modal.querySelector('.popup__button a');
+const popup = modal.querySelector('.popup');
 const formPopup = modal.querySelector('.form__popup');
 const offerSlider = document.querySelector('.offers');
 const btnLoadMore = document.querySelector('.load-more');
@@ -19,9 +20,6 @@ const template = templateFragment.querySelector('.modal-success');
 const DEFAULT_VISIBLE_CARDS = 6;
 const COUNT_SHOW_CARDS = 3;
 
-const tab = document.querySelector('#tabs-1');
-const height = tab.scrollHeight;
-tab.style.height = `${height}px`;
 
 function toggleMobileMenu() {
   navMenu.classList.toggle('active');
@@ -118,6 +116,7 @@ const sertificatesSwiper = new Swiper(".sertificates-swiper", {
 const swiper = new Swiper(".mySwiper", {
   spaceBetween: 0,
   slidesPerView: 1,
+  loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -143,7 +142,7 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-accordion.addEventListener('click', change);
+// accordion.addEventListener('click', change);
 burger.addEventListener('click', toggleMobileMenu);
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
@@ -254,20 +253,33 @@ function getStockPrice(value, textNode, pricePriceNOde) {
 function closeModal(evt) {
   if (evt.target === modal) {
     formPopup.classList.remove('show');
-    btnOrder.textContent = 'Заказать'
+    popup.classList.remove('show');
     document.removeEventListener('keydown', keyPressCloseModalHandler);
     modal.removeEventListener('click', closeModal);
     modal.close();
   }
+
+  if (evt.target === popup) {
+    popup.classList.remove('show');
+    formPopup.classList.remove('show');
+  }
 }
 
 function keyPressCloseModalHandler(evt) {
-  if (evt.key === 'Escape') {
-      document.removeEventListener('keydown', closeModal);
-      modal.close();
-      modal.removeEventListener('click', closeModal);
+  if (evt.key === 'Escape' && modal.open) {
+    evt.preventDefault();
+
+    if (popup.classList.contains('show')) {
       formPopup.classList.remove('show');
-      btnOrder.textContent = 'Заказать'
+      popup.classList.remove('show');
+      return;
+    }
+
+    formPopup.classList.remove('show');
+    popup.classList.remove('show');
+    modal.close();
+    document.removeEventListener('keydown', closeModal);
+    modal.removeEventListener('click', closeModal);
   };
 }
 
@@ -275,19 +287,22 @@ function showFormModal(evt) {
   evt.preventDefault();
 
   if (formPopup.classList.contains('show')) {
-    btnOrder.textContent = 'Заказать'
+    popup.classList.remove('show');
     formPopup.classList.remove('show');
     return;
   }
 
-  btnOrder.textContent = 'Скрыть'
+  popup.classList.add('show');
   formPopup.classList.add('show');
 }
 
 btnOrder.addEventListener('click', showFormModal);
-[...document.forms].forEach((form) => form.addEventListener('submit', submitFormHandler)); 
 
-function getCountCards(count = 1) {
+for (const form of document.forms) {
+  form.addEventListener('submit', submitFormHandler)
+}
+
+function getCountCards(count) {
   let value = DEFAULT_VISIBLE_CARDS;
   return function() {
     value = value + count;
@@ -374,10 +389,11 @@ btnLoadMore.addEventListener('click', (evt) => {
 
 function onFail(target) {
   target.classList.add('invalid');
+
   setTimeout(() => {
     target.classList.remove('disabled');
     target.classList.remove('invalid');
-;  }, 1000);
+;  }, 2000);
 }
 
 function resetForms(nodeEl, target) {
@@ -386,7 +402,7 @@ function resetForms(nodeEl, target) {
   setTimeout(() => {
     if (modal.open) {
       formPopup.classList.remove('show');
-      btnOrder.textContent = 'Заказать'
+      popup.classList.remove('show');
       document.removeEventListener('keydown', keyPressCloseModalHandler);
       modal.removeEventListener('click', closeModal);
       modal.close();
@@ -399,13 +415,35 @@ function resetForms(nodeEl, target) {
   }, 2000);
 }
 
+
+let accordion = document.querySelector('.accordion');
+let items = accordion.querySelectorAll('.accordion__item');
+let title = accordion.querySelectorAll('.accordion__title');
+
+function toggleAccordion() {
+  let thisItem = this.parentNode;
+  
+  items.forEach(item => {
+    if (thisItem == item ) {
+      // if this item is equal to the clicked item, open it.
+      thisItem.classList.toggle('active');
+      return;
+    } 
+    // otherwise, remove the open class
+    item.classList.remove('active');
+  });
+}
+
+title.forEach(question => question.addEventListener('click', toggleAccordion));
+
+
+
   //Функция отправки форм
 async function submitFormHandler(evt) {
   evt.preventDefault();
   const target = evt.target;
   const formData =  new FormData(target);
   const body = Object.fromEntries(formData.entries());
-
 
   const element = template.cloneNode(true);
   target.classList.add('disabled');
@@ -417,6 +455,5 @@ async function submitFormHandler(evt) {
     } else {
       throw new Error();
     }
-  }).catch(() => onFail(target));
+  }).catch(() =>  onFail(target));
 }
-

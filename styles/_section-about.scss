@@ -35,7 +35,7 @@
 
 .setificates {
   max-width: 1120px;
-  margin:  0 auto;
+  margin: 15px auto 0;
 }
 
 .about__description {
@@ -62,7 +62,7 @@
 }
 
 .setificates__wrapper {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 
@@ -86,5 +86,10 @@
   .about {
     padding: 60px 0 46px;
     position: relative;
+  }
+
+  .setificates {
+    max-width: 1120px;
+    margin:  95px auto 0;
   }
 }

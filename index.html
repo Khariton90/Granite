@@ -60,7 +60,7 @@
               для ритуальных услуг <br>
               и строительства
             </h1>
-  
+
             <div class="primary__block-form">
               <form method="post" action="#" autocomplete="off" class="form form__primary">
                 <div class="form-body">
@@ -69,7 +69,8 @@
                     <input type="text" placeholder="Имя" name="name" required>
                   </label>
                   <label for="">
-                    <input class="telefone-field" type="tel" placeholder="Ваш телефон" name="telephone" required minlength="18">
+                    <input class="telefone-field" type="tel" placeholder="Ваш телефон" name="telephone" required
+                      minlength="18">
                   </label>
                   <input type="submit" value="Отправить" class="btn-submit">
                 </div>
@@ -77,70 +78,65 @@
             </div>
           </div>
         </div>
-        <img  class="primary-granite-bg" src="./images/static/bg-primary-granit.png" alt="granit">
+        <img class="primary-granite-bg" src="./images/static/bg-primary-granit.png" alt="granit">
       </section>
-     <section class="section slider" id="stocks">
-      
-      <!-- Карточка предложения -->
-      <dialog id="popup">
-        <article class="popup">
-          <div class="popup__content">
-            <h3 class="popup__title card__title" data-attr="title">TUSERKAN</h3>
-            <p class="popup__subtitle card__subtitle">Polished</p>
-            <p class="popup__text popup__text--size card__offer-sizes" data-attr="size">300*600*30</p>
+      <section class="section slider" id="stocks">
 
-            <img src="./images/static/slider/787_original-2.png" 
-             data-attr="previewImage" 
-             class="popup__card--image card__image"
-              width="308" 
-              height="154" 
-              alt="Изображение товара">
-  
-              <div class="price__block">
-                <p class="popup__text popup__text--price price"  data-attr="price">380,88$</p>
-                <p class="popup__text--old-price old-price"  data-attr="oldPrice">380,88$</p>
+        <!-- Карточка предложения -->
+        <dialog id="popup">
+          <article class="popup">
+            <div class="popup__wrapper">
+              <div class="popup__content">
+                <h3 class="popup__title card__title" data-attr="title">TUSERKAN</h3>
+                <p class="popup__subtitle card__subtitle">Polished</p>
+                <p class="popup__text popup__text--size card__offer-sizes" data-attr="size">300*600*30</p>
+
+                <img src="./images/static/slider/787_original-2.png" data-attr="previewImage"
+                  class="popup__card--image card__image" width="308" height="154" alt="Изображение товара">
+
+                <div class="price__block">
+                  <p class="popup__text popup__text--price price" data-attr="price">380,88$</p>
+                  <p class="popup__text--old-price old-price" data-attr="oldPrice">380,88$</p>
+                </div>
+                <p class="popup__text popup__text--amount amount" data-attr="amount">1м/п</p>
               </div>
-            <p class="popup__text popup__text--amount amount"  data-attr="amount">1м/п</p>
-          </div>
-          <div class="popup__description">
-            <h4 class="popup__text popup__text--stock" data-attr="stock">На этот товар действует Акция, <br> подробности можно узнать <br> у менеджера.</h4>
-            <ul class="popup__features" data-attr="features">
-              <li class="popup__feature popup__feature--header">Материал</li>
-              <li class="popup__feature popup__feature--material">Гранит</li>
-              <li class="popup__feature popup__feature--header">Доступные формы</li>
-              <li class="popup__feature popup__feature--shapes">Плитка</li>
-              <li class="popup__feature popup__feature--header">Доступная толщина</li>
-              <li class="popup__feature popup__feature--thickness">20мм</li>
-              <li class="popup__feature popup__feature--header">Поверхность</li>
-              <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
-              <li class="popup__feature popup__feature--header">Страна</li>
-              <li class="popup__feature popup__feature--country">Иран</li>
-              <li class="popup__feature popup__feature--header">Цвет</li>
-              <li class="popup__feature popup__feature--color">Коричневый</li>
-            </ul>
-            <div class="popup__button">
-              <a href="/"> Заказать</a>
+              <div class="popup__description">
+                <h4 class="popup__text popup__text--stock" data-attr="stock">На этот товар действует Акция, <br>
+                  подробности можно узнать <br> у менеджера.</h4>
+                <ul class="popup__features" data-attr="features">
+                  <li class="popup__feature popup__feature--header">Материал</li>
+                  <li class="popup__feature popup__feature--material">Гранит</li>
+                  <li class="popup__feature popup__feature--header">Доступные формы</li>
+                  <li class="popup__feature popup__feature--shapes">Плитка</li>
+                  <li class="popup__feature popup__feature--header">Доступная толщина</li>
+                  <li class="popup__feature popup__feature--thickness">20мм</li>
+                  <li class="popup__feature popup__feature--header">Поверхность</li>
+                  <li class="popup__feature popup__feature--surfaces">Термообработка, Полировка</li>
+                  <li class="popup__feature popup__feature--header">Страна</li>
+                  <li class="popup__feature popup__feature--country">Иран</li>
+                  <li class="popup__feature popup__feature--header">Цвет</li>
+                  <li class="popup__feature popup__feature--color">Коричневый</li>
+                </ul>
+                <div class="popup__button">
+                  <a href="/"> Заказать</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <form class="form form__primary form__popup" method="post" autocomplete="off">
-          <div class="form-body">
-            <label for="">
-              <span>Оставьте заявку <br> и мы вам перезвоним</span>
-              <input type="text" placeholder="Имя" name="name" required>
-            </label>
-            <label for="">
-              <input class="telefone-field" 
-              type="tel" 
-              placeholder="Ваш номер" 
-              name="telephone" 
-              minlength="18">
-            </label>
-            <input type="submit" value="Отправить" class="btn-submit">
-          </div>
-        </form> 
-      </dialog>
+          <form class="form form__primary form__popup" method="post" autocomplete="off">
+            <div class="form-body">
+              <label for="">
+                <span>Оставьте заявку <br> и мы вам перезвоним</span>
+                <input type="text" placeholder="Имя" name="name" required>
+              </label>
+              <label for="">
+                <input class="telefone-field" type="tel" placeholder="Ваш номер" name="telephone" minlength="18">
+              </label>
+              <input type="submit" value="Отправить" class="btn-submit">
+            </div>
+          </form>
+        </dialog>
         <div class="swiper mySwiper offers">
           <div class="swiper-wrapper offers__wrapper">
             <div class="swiper-slide">
@@ -184,7 +180,8 @@
                   <img class="card__image" src="./images/static/slider/787_original.png" alt="offer">
                   <figcaption>
                     <div class="card__price-block">
-                      <p class="price">310,88$</p><p class="old-price active">380,88$</p>
+                      <p class="price">310,88$</p>
+                      <p class="old-price active">380,88$</p>
                     </div>
                     <p class="amount">1м/п</p>
                   </figcaption>
@@ -241,7 +238,8 @@
                   <img class="card__image" src="./images/static/slider/787_original-3.png" alt="offer">
                   <figcaption>
                     <div class="card__price-block">
-                      <p class="price">310,88$</p><p class="old-price active">380,88$</p>
+                      <p class="price">310,88$</p>
+                      <p class="old-price active">380,88$</p>
                     </div>
                     <p class="amount">1м/п</p>
                   </figcaption>
@@ -269,7 +267,8 @@
                   <img class="card__image" src="./images/static/slider/787_original-4.png" alt="offer">
                   <figcaption>
                     <div class="card__price-block">
-                      <p class="price">310,88$</p><p class="old-price active"></p>
+                      <p class="price">310,88$</p>
+                      <p class="old-price active"></p>
                     </div>
                     <p class="amount">1м/п</p>
                   </figcaption>
@@ -326,7 +325,8 @@
                   <img class="card__image" src="./images/static/slider/787_original-1.png" alt="offer">
                   <figcaption>
                     <div class="card__price-block">
-                      <p class="price">310,88$</p><p class="old-price active">380,88$</p>
+                      <p class="price">310,88$</p>
+                      <p class="old-price active">380,88$</p>
                     </div>
                     <p class="amount">1м/п</p>
                   </figcaption>
@@ -352,11 +352,11 @@
         </div>
       </section>
 
-     <div class="advantage-product">
-      <section class="advantage">
-        <div class="container">
-          <h2 class="advantage__title">В чем наши преимущества</h2>
-          <div class="advantage__wrapper">
+      <div class="advantage-product">
+        <section class="advantage">
+          <div class="container">
+            <h2 class="advantage__title">В чем наши преимущества</h2>
+            <div class="advantage__wrapper">
               <div class="advantage__row">
                 <div class="advantage__col">
                   <p class="advantage-header">2000 кв/м</p>
@@ -365,7 +365,8 @@
                 </div>
                 <div class="advantage__col">
                   <p class="advantage-header">> 100 станков</p>
-                  <p>Технические возможности и квалификация персонала завода  позволяют осуществлять заказы в сжатые сроки.</p>
+                  <p>Технические возможности и квалификация персонала завода позволяют осуществлять заказы в сжатые
+                    сроки.</p>
                 </div>
                 <div class="advantage__col">
                   <p class="advantage-header">> 10 000 кб/м</p>
@@ -377,155 +378,194 @@
                 <div class="advantage__col">
                   <p class="advantage-header">Пожизненная гарантия</p>
                   <p>На Карельский габбро-диабаз.
-                    Мы предлагаем уникальную продукцию из карельского гранита, которая не имеет аналогов на российском рынке.</p>
+                    Мы предлагаем уникальную продукцию из карельского гранита, которая не имеет аналогов на российском
+                    рынке.</p>
                 </div>
                 <div class="advantage__col">
                   <p class="advantage-header">Блоки и Слэбы</p>
                   <p>Мы поставляем блоки и слэбы.
-                    Поможем Вам организовать доставку в любой регион с помощью и по ценам услуг транспортных компаний.</p>
-                </div>
-              </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section product" id="product">
-        <div class="container">
-          <h2 class="product__title">Продукция</h2>
-
-          <div class="product__wrapper">
-            <div class="product__accordeon">
-
-              <div id="accordion">
-                <h3 class="accordion__top select" data-value="monuments">Надгробные плиты <span>&#8250;</span></h3>
-                <div class="tabs__text" id="tabs-1">
-                  <p >
-                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
-
-                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
-                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
-                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
-                  Избранный природный рисунок на плите получается ярким и четким.
-                  </p>
-                </div>
-                <h3 class="accordion__top" data-value="stands">Подставки <span>&#8250;</span></h3>
-                <div class="tabs__text" id="tabs-2">
-                  <p>
-                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
-
-                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
-                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
-                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
-                  Избранный природный рисунок на плите получается ярким и четким.
-                  </p>
-                </div>
-                <h3 class="accordion__top" data-value="stella">Стелы <span>&#8250;</span></h3>
-                <div class="tabs__text" id="tabs-3">
-                  <p>
-                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
-
-                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
-                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
-                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
-                  Избранный природный рисунок на плите получается ярким и четким.
-                  </p>
-                </div>
-                <h3 class="accordion__top" data-value="paving">Брусчатка <span>&#8250;</span></h3>
-                <div class="tabs__text" id="tabs-4">
-                  <p>
-                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
-
-                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
-                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
-                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
-                  Избранный природный рисунок на плите получается ярким и четким.
-                  </p>
-                </div>
-                <h3 class="accordion__top" data-value="flower">Цветник <span>&#8250;</span></h3>
-                <div class="tabs__text" id="tabs-5">
-                  <p>
-                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
-
-                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
-                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
-                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
-                  Избранный природный рисунок на плите получается ярким и четким.
-                  </p>
-                </div>
-                <h3 class="accordion__top" data-value="balls">Шары на ножке <span>&#8250;</span></h3>
-                <div class="tabs__text" id="tabs-6">
-                  <p>
-                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
-
-                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
-                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
-                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
-                  Избранный природный рисунок на плите получается ярким и четким.
-                  </p>
-                </div>
-                <h3 class="accordion__top" data-value="vases">Вазы <span>&#8250;</span></h3>
-                <div class="tabs__text" id="tabs-7">
-                  <p>
-                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
-
-                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
-                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
-                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
-                  Избранный природный рисунок на плите получается ярким и четким.
-                  </p>
-                </div>
-                <h3 class="accordion__top" data-value="slab">Слэбы <span>&#8250;</span></h3>
-                <div class="tabs__text" id="tabs-8">
-                  <p>
-                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
-
-                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
-                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
-                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
-                  Избранный природный рисунок на плите получается ярким и четким.
-                  </p>
-                </div>
-                <h3 class="accordion__top" data-value="blocks">Блоки <span>&#8250;</span></h3>
-                <div class="tabs__text" id="tabs-9">
-                  <p>
-                    Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности. Материал обладает высочайшими функциональными преимуществами, прочностью.
-
-                  Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот материал имеет средне- и мелкозернистую структуру. 
-                  Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин, сколов.
-                  На выбор покупателя представлены различные варианты окраса самого камня: черный, красный,зеленый,серый. 
-                  Избранный природный рисунок на плите получается ярким и четким.
+                    Поможем Вам организовать доставку в любой регион с помощью и по ценам услуг транспортных компаний.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div class="product__images">
-              <img class="accordion-image active" data-value="monuments" src="./images/static/monument.png" alt="monument">
-              <img class="accordion-image" data-value="stands" src="./images/static/blocks.png" alt="blocks">
-              <img class="accordion-image" data-value="stella" src="./images/static/stella.png" alt="blocks">
-              <img class="accordion-image" data-value="paving" src="./images/static/blocks.png" alt="blocks">
-              <img class="accordion-image" data-value="flower" src="./images/static/monument.png" alt="blocks">
-              <img class="accordion-image" data-value="balls" src="./images/static/blocks.png" alt="blocks">
-              <img class="accordion-image" data-value="vases" src="./images/static/monument.png" alt="blocks">
-              <img class="accordion-image" data-value="slab" src="./images/static/blocks.png" alt="blocks">
-              <img class="accordion-image" data-value="blocks" src="./images/static/monument.png" alt="blocks">
+        <section class="section product" id="product">
+          <div class="container">
+            <h2 class="product__title">Продукция</h2>
+
+            <div class="product__wrapper">
+              <div class="product__accordeon">
+
+                <div class="accordion">
+                  <ul class="accordion__items">
+                    <li class="accordion__item active">
+                      <div class="accordion__title">
+                        <h3>Надгробные плиты</h3>
+                        <span class="accordion__icon">&#8250;</span>
+                      </div>
+                      <div class="accordion__content">
+                        <p>
+                          Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности.
+                          Материал обладает высочайшими функциональными преимуществами, прочностью.
+
+                          Наиболее часто стандартные памятники из карельского гранита заказывают потому, что этот
+                          материал имеет средне- и мелкозернистую структуру.
+                          Именно этот факт влияет на плотность гранита – он не склонен к образованию внутренних трещин,
+                          сколов.
+                          На выбор покупателя представлены различные варианты окраса самого камня: черный,
+                          красный,зеленый,серый.
+                          Избранный природный рисунок на плите получается ярким и четким.
+                          Изготовленные из карельского гранита стандартные памятники – залог качества и долговечности.
+                          Материал обладает высочайшими функциональными преимуществами, прочностью.
+                        </p>
+
+                        <div class="accordion__content-image">
+                          <img class="accordion-image active" src="./images/static/monument.png" alt="monument">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item">
+                      <div class="accordion__title">
+                        <h3>Подставки</h3>
+                        <span class="accordion__icon">&#8250;</span>
+                      </div>
+                      <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates
+                          earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae
+                          cumque quod quam quidem? Cupiditate, provident?</p>
+
+                          <div class="accordion__content-image active">
+                            <img class="accordion-image" src="./images/static/blocks.png" alt="blocks">
+                          </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item">
+                      <div class="accordion__title">
+                        <h3>Стеллы</h3>
+                        <span class="accordion__icon">&#8250;</span>
+                      </div>
+                      <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates
+                          earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae
+                          cumque quod quam quidem? Cupiditate, provident?</p>
+
+                          <div class="accordion__content-image">
+                            <img class="accordion-image" src="./images/static/blocks.png" alt="blocks">
+                          </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item">
+                      <div class="accordion__title">
+                        <h3>Брусчатка</h3>
+                        <span class="accordion__icon">&#8250;</span>
+                      </div>
+                      <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates
+                          earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae
+                          cumque quod quam quidem? Cupiditate, provident?</p>
+
+                          <div class="accordion__content-image">
+                            <img class="accordion-image" src="./images/static/blocks.png" alt="blocks">
+                          </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item">
+                      <div class="accordion__title">
+                        <h3>Цветник</h3>
+                        <span class="accordion__icon">&#8250;</span>
+                      </div>
+                      <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates
+                          earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae
+                          cumque quod quam quidem? Cupiditate, provident?</p>
+
+                          <div class="accordion__content-image">
+                            <img class="accordion-image" src="./images/static/blocks.png" alt="blocks">
+                          </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item">
+                      <div class="accordion__title">
+                        <h3>Шары на ножке</h3>
+                        <span class="accordion__icon">&#8250;</span>
+                      </div>
+                      <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates
+                          earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae
+                          cumque quod quam quidem? Cupiditate, provident?</p>
+
+                          <div class="accordion__content-image">
+                            <img class="accordion-image" src="./images/static/blocks.png" alt="blocks">
+                          </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item">
+                      <div class="accordion__title">
+                        <h3>Вазы</h3>
+                        <span class="accordion__icon">&#8250;</span>
+                      </div>
+                      <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates
+                          earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae
+                          cumque quod quam quidem? Cupiditate, provident?</p>
+
+                          <div class="accordion__content-image">
+                            <img class="accordion-image" src="./images/static/blocks.png" alt="blocks">
+                          </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item">
+                      <div class="accordion__title">
+                        <h3>Слэбы</h3>
+                        <span class="accordion__icon">&#8250;</span>
+                      </div>
+                      <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates
+                          earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae
+                          cumque quod quam quidem? Cupiditate, provident?</p>
+
+                          <div class="accordion__content-image">
+                            <img class="accordion-image" src="./images/static/blocks.png" alt="blocks">
+                          </div>
+                      </div>
+                    </li>
+                    <li class="accordion__item">
+                      <div class="accordion__title">
+                        <h3>Блоки</h3>
+                        <span class="accordion__icon">&#8250;</span>
+                      </div>
+                      <div class="accordion__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates
+                          earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae
+                          cumque quod quam quidem? Cupiditate, provident?</p>
+
+                          <div class="accordion__content-image">
+                            <img class="accordion-image" src="./images/static/blocks.png" alt="blocks">
+                          </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <form method="post" autocomplete="off" class="form form__footer form__product">
-        <div class="form-body">
-          <label for="">
-            <span>Оставьте заявку <br> и мы вам перезвоним</span>
-            <input type="text" placeholder="Имя" name="name" required>
-          </label>
-          <label for="">
-            <input class="telefone-field" type="tel" placeholder="Ваш номер" name="telephone" minlength="18">
-          </label>
-          <input type="submit" value="Отправить" class="btn-submit">
-        </div>
-      </form>
-    </div> 
+        </section>
+        <form method="post" autocomplete="off" class="form form__footer form__product">
+          <div class="form-body">
+            <label for="">
+              <span>Оставьте заявку <br> и мы вам перезвоним</span>
+              <input type="text" placeholder="Имя" name="name" required>
+            </label>
+            <label for="">
+              <input class="telefone-field" type="tel" placeholder="Ваш номер" name="telephone" minlength="18">
+            </label>
+            <input type="submit" value="Отправить" class="btn-submit">
+          </div>
+        </form>
+      </div>
 
       <section class="section details" id="details">
         <div class="container">
@@ -533,40 +573,45 @@
 
           <div class="details__wrapper">
             <div class="details__card" data-src="./images/static/details/image-1.jpg">
-              <img src="./images/static/details/image-1.jpg"  class="" alt="details_1">
+              <img src="./images/static/details/image-1.jpg" class="" alt="details_1">
             </div>
             <div class="details__card" data-src="./images/static/details/image-2.jpg">
-              <img src="./images/static/details/image-2.jpg"  alt="details_2">  
+              <img src="./images/static/details/image-2.jpg" alt="details_2">
             </div>
             <div class="details__card" data-src="./images/static/details/image-3.jpg">
-              <img src="./images/static/details/image-3.jpg"  alt="details_3">  
+              <img src="./images/static/details/image-3.jpg" alt="details_3">
             </div>
-            <div class="details__card"data-src="./images/static/details/image-4.jpg">
-              <img src="./images/static/details/image-4.jpg"  alt="details_4"> 
+            <div class="details__card" data-src="./images/static/details/image-4.jpg">
+              <img src="./images/static/details/image-4.jpg" alt="details_4">
             </div>
             <div class="details__card" data-src="./images/static/details/image-5.jpg">
-              <img src="./images/static/details/image-5.jpg"  alt="details_5"> 
+              <img src="./images/static/details/image-5.jpg" alt="details_5">
             </div>
             <div class="details__card" data-src="./images/static/details/image-1.jpg">
-              <img src="./images/static/details/image-1.jpg"  alt="details_6"> 
+              <img src="./images/static/details/image-1.jpg" alt="details_6">
             </div>
             <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
-              <img src="./images/static/details/plug.png" alt="details_6"> 
+              <img src="./images/static/details/plug.png" alt="details_6">
             </div>
             <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
-              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg"
+                alt="details_6">
             </div>
             <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
-              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg"
+                alt="details_6">
             </div>
             <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
-              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg"
+                alt="details_6">
             </div>
             <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
-              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg"
+                alt="details_6">
             </div>
             <div class="details__card hide" data-src="./images/static/details/image-1.jpg">
-              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg" alt="details_6"> 
+              <img src="./images/static/details/plug.png" data-src="./images/static/details/image-1.jpg"
+                alt="details_6">
             </div>
           </div>
           <div class="details-btn">
@@ -581,11 +626,17 @@
             <h2 class="about__title">О нас</h2>
 
             <div class="about__description">
-              <p>Компания Петра Альянс представляет огромный ассортимент изделий из гранита для осуществления работ и благоустройства дорожного, декоративного и архитектурно-строительного назначения.</p>
-              <p>Все представленные виды продукции отличаются высоким уровнем износостойкости, безупречным качеством, идеальной фактурой и цветом.</p>
+              <p>Компания Петра Альянс представляет огромный ассортимент изделий из гранита для осуществления работ и
+                благоустройства дорожного, декоративного и архитектурно-строительного назначения.</p>
+              <p>Все представленные виды продукции отличаются высоким уровнем износостойкости, безупречным качеством,
+                идеальной фактурой и цветом.</p>
               <p>Объемы нашего производства в течение всего года гарантируют доступность всей продукции.</p>
-              <p>Постоянный и жесткий контроль качества полностью исключает производство элементов низкого качества. Вся представленная продукция доступна в приемлемом ценовом диапазоне, также мы предлагаем нашим клиентам постоянные скидки.</p>
-              <p>Наши высококвалифицированные сотрудники всегда готовы провести грамотную консультацию и помочь осуществить безошибочный выбор требуемого вам продукта. К каждому клиенту мы проявляем индивидуальный подход.</p>
+              <p>Постоянный и жесткий контроль качества полностью исключает производство элементов низкого качества. Вся
+                представленная продукция доступна в приемлемом ценовом диапазоне, также мы предлагаем нашим клиентам
+                постоянные скидки.</p>
+              <p>Наши высококвалифицированные сотрудники всегда готовы провести грамотную консультацию и помочь
+                осуществить безошибочный выбор требуемого вам продукта. К каждому клиенту мы проявляем индивидуальный
+                подход.</p>
               <p> Этот подход позволяет гарантировать лучшее качество выполняемой работы.</p>
             </div>
 
@@ -609,7 +660,8 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="sertificates__item">
-                      <img src="./images/static/sertificates/sert-gabbro-blocks 2.jpg" alt="sertificates-3" class="zoomple">
+                      <img src="./images/static/sertificates/sert-gabbro-blocks 2.jpg" alt="sertificates-3"
+                        class="zoomple">
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -660,8 +712,8 @@
       <div class="modal-success">
         <p>Благодарим за выбор нашей компании,<br> в ближайшее время вам перезвонит <br> наш менеджер.</p>
       </div>
-    </div>
-    </template>  
+  </div>
+  </template>
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
