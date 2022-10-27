@@ -25,6 +25,24 @@ function toggleMobileMenu() {
   burger.classList.toggle('active');
 };
 
+
+window.onload = load;
+
+function load() {
+  console.log('fsdfd')
+  for (const card of offerCards) {
+    const stock = card.querySelector('.card__stock');
+    const oldPrice = card.querySelector('.old-price');
+  
+    if (oldPrice.textContent !== '') {
+      stock.classList.add('active');
+    } else {
+      oldPrice.classList.remove('active');
+    }
+  }
+};
+
+
 function scroll(e) {
   e.preventDefault();
   const href = this.getAttribute('href').substring(1);
@@ -336,18 +354,6 @@ btnLoadMore.addEventListener('click', (evt) => {
   }
 
   maskPhone('.telefone-field');
-
-[...offerCards].forEach(card => {
-  const stock = card.querySelector('.card__stock');
-  const oldPrice = card.querySelector('.old-price');
-
-  if (oldPrice.textContent !== '') {
-    stock.classList.add('active');
-    return;
-  } 
-
-  oldPrice.classList.remove('active');
-});
 
 function onFail(target) {
   target.classList.add('invalid');

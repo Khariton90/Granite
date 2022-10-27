@@ -297,7 +297,9 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 308px;
+  height: 345px;
 }
 .card img {
   max-width: 308px;
@@ -350,6 +352,7 @@
 
 .card__subtitle {
   font-size: 14px;
+  min-height: 18px;
 }
 
 .card {
@@ -368,6 +371,7 @@
 
 .card__offer-sizes {
   font-weight: 400;
+  min-height: 19px;
 }
 
 .old-price {
