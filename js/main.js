@@ -1,9 +1,6 @@
 const burger = document.querySelector('.header__burger');
 const navMenu = document.querySelector('.nav');
 const header = document.querySelector(".header");
-// const accordion = document.getElementById('accordion');
-// const imagesList = document.querySelector('.product__images');
-// const images = imagesList.querySelectorAll('.accordion-image');
 const modal = document.querySelector('dialog');
 const btnOrder = modal.querySelector('.popup__button a');
 const popup = modal.querySelector('.popup');
@@ -12,14 +9,15 @@ const offerSlider = document.querySelector('.offers');
 const btnLoadMore = document.querySelector('.load-more');
 const detailsCards = document.querySelectorAll('.details__card');
 const offerCards = document.querySelectorAll('.offers__card ');
-
 const templateFragment = document.querySelector('#modal-success').content;
 const template = templateFragment.querySelector('.modal-success');
 
+const accordion = document.querySelector('.accordion');
+const items = accordion.querySelectorAll('.accordion__item');
+const title = accordion.querySelectorAll('.accordion__title');
 
 const DEFAULT_VISIBLE_CARDS = 6;
 const COUNT_SHOW_CARDS = 3;
-
 
 function toggleMobileMenu() {
   navMenu.classList.toggle('active');
@@ -56,39 +54,6 @@ function getNavActiveClass() {
   header.classList.remove("active");
 }
 
-function change(event) {
-  const targ = event.target;
-  if (targ.tagName !== 'H3') return;
-  if (targ.classList.contains('select')) {
-    hideAll();
-  } else {
-    const value = targ.dataset.value;
-    hideAll(value);
-    targ.classList.add('select');
-    showText(targ.nextElementSibling);
-  }
-}
-
-function hideAll(value) {
-  const h3El = accordion.querySelectorAll('h3');
-  const divEl = accordion.querySelectorAll('div');
-
-  for (let i = 0; i < h3El.length; i++) {
-    h3El[i].classList.remove('select');
-    images[i].classList.remove('active');
-    divEl[i].style.height = '0';
-
-    if (images[i].dataset.value === value) {
-      images[i].classList.add('active');
-    }
-  }
-
-}
-
-function showText(textEl) {
-  textEl.style.height = textEl.scrollHeight + 'px';
-}
-
 const sertificatesSwiper = new Swiper(".sertificates-swiper", {
   spaceBetween: 0,
   slidesPerView: 1,
@@ -110,8 +75,6 @@ const sertificatesSwiper = new Swiper(".sertificates-swiper", {
     prevEl: ".sertificates-prev",
   },
 });
-
-
 
 const swiper = new Swiper(".mySwiper", {
   spaceBetween: 0,
@@ -142,7 +105,6 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-// accordion.addEventListener('click', change);
 burger.addEventListener('click', toggleMobileMenu);
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
@@ -415,21 +377,14 @@ function resetForms(nodeEl, target) {
   }, 2000);
 }
 
-
-let accordion = document.querySelector('.accordion');
-let items = accordion.querySelectorAll('.accordion__item');
-let title = accordion.querySelectorAll('.accordion__title');
-
 function toggleAccordion() {
   let thisItem = this.parentNode;
   
   items.forEach(item => {
     if (thisItem == item ) {
-      // if this item is equal to the clicked item, open it.
       thisItem.classList.toggle('active');
       return;
     } 
-    // otherwise, remove the open class
     item.classList.remove('active');
   });
 }
@@ -444,6 +399,8 @@ async function submitFormHandler(evt) {
   const target = evt.target;
   const formData =  new FormData(target);
   const body = Object.fromEntries(formData.entries());
+
+  // const bodyJson = JSON.stringify(body);
 
   const element = template.cloneNode(true);
   target.classList.add('disabled');
